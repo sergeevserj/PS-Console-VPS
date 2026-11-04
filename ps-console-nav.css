@@ -1,0 +1,18 @@
+/* Console navigation: left menu, second-level menu, products panel */
+.ps-side-menu__item{--c:var(--blue-600);--cd:var(--blue-700);position:relative;box-sizing:border-box;display:flex;align-items:center;width:60px;height:46px;margin:0;padding:13px 20px;border:0;border-radius:5px;background:none;color:var(--neutral-0);cursor:pointer}
+.ps-side-menu__item--products{--c:var(--purple-600);--cd:var(--purple-700);height:40px;padding:10px 20px}
+.ps-side-menu__item--current,.ps-side-menu__item[aria-expanded="true"],.ps-side-menu__item:hover,.ps-side-menu__item:focus-visible{z-index:2;margin-left:5px;padding-left:15px;padding-right:20px;background:var(--c)}
+.ps-side-menu__item--current{height:40px;padding-top:10px;padding-bottom:10px}
+.ps-side-menu:has(.ps-side-menu__item[aria-expanded="true"]) .ps-side-menu__item--current:not(:hover):not(:focus-visible){height:40px;margin-left:0;padding:10px 20px;background:none}
+.ps-side-menu__item:hover,.ps-side-menu__item:focus-visible{z-index:3}
+.ps-side-menu__item:focus-visible{outline:2px solid var(--neutral-0);outline-offset:-2px}
+.ps-side-menu__tip{display:none;position:absolute;left:calc(100% - 15px);top:50%;transform:translateY(-50%);box-sizing:border-box;height:30px;padding:5px 10px;border-radius:5px;background:var(--cd);color:var(--neutral-0);font-family:var(--font-sans);font-size:14px;line-height:20px;font-weight:600;white-space:nowrap;pointer-events:none}
+.ps-side-menu__item:hover .ps-side-menu__tip,.ps-side-menu__item:focus-visible .ps-side-menu__tip{display:block}
+.ps-input__control::-webkit-search-cancel-button{-webkit-appearance:none;display:none}
+.ps-fav{position:absolute;top:-2px;right:30px;z-index:1;box-sizing:border-box;display:flex;align-items:center;justify-content:center;width:30px;height:30px;margin:0;padding:0;border:0;border-radius:5px;background:var(--slate-200);color:var(--neutral-0);cursor:pointer}
+.ps-fav:hover,.ps-fav[aria-pressed="true"]{background:var(--blue-600);color:var(--neutral-0)}
+.ps-fav:focus-visible{outline:2px solid var(--blue-800);outline-offset:2px}
+.ps-product-card{background:var(--neutral-0)}.ps-product-card:hover{background:var(--slate-100)}
+a.ps-cat-link:hover{background:var(--slate-200);color:var(--neutral-950)}
+a.ps-cat-link:hover .ps-link-button{text-decoration:none}
+a{color:var(--neutral-950)}a:hover,a:hover *{text-decoration:none}
