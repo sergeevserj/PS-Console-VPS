@@ -1,0 +1,340 @@
+/* PS Design System tokens (from tokens.json) */
+:root{--neutral-1000:#0b0d0e;--neutral-950:#1c1f22;--neutral-900:#31393f;--neutral-800:#454f54;--neutral-700:#5c6970;--neutral-600:#819098;--neutral-500:#9da9af;--neutral-400:#c7ced1;--neutral-300:#d5dadd;--neutral-200:#e3e6e8;--neutral-100:#f1f3f3;--neutral-50:#f9fafa;--neutral-0:#ffffff;--slate-1000:#070e12;--slate-950:#11212c;--slate-900:#253b4a;--slate-800:#4e6b7e;--slate-700:#668599;--slate-600:#87a3b5;--slate-500:#a9bdcb;--slate-400:#c0cfd9;--slate-300:#cdd8e0;--slate-200:#dce4e9;--slate-100:#f2f5f7;--slate-50:#f9fafb;--blue-950:#0b2532;--blue-900:#144761;--blue-800:#217798;--blue-700:#2095c0;--blue-600:#20a8d8;--blue-500:#4fc0e6;--blue-400:#84d3ed;--blue-300:#bae6f5;--blue-200:#d2eff9;--blue-100:#e6f7ff;--blue-50:#f3fbff;--purple-950:#29131f;--purple-900:#53213b;--purple-800:#6b244b;--purple-700:#8e2f60;--purple-600:#b03273;--purple-500:#c6498a;--purple-400:#e996b9;--purple-300:#ecaec7;--purple-200:#f3ccdb;--purple-100:#f9e7ee;--purple-50:#fcf8fa;--violet-950:#090c32;--violet-900:#121864;--violet-800:#2c238c;--violet-700:#432dc4;--violet-600:#6248f5;--violet-500:#8277fc;--violet-400:#a59cff;--violet-300:#bebcfd;--violet-200:#d4d3fd;--violet-100:#e9eafe;--violet-50:#f6f6ff;--green-950:#16271d;--green-900:#264a33;--green-800:#3d8459;--green-700:#429662;--green-600:#4dbd74;--green-500:#6cc88c;--green-400:#8ad4a4;--green-300:#a9dfbb;--green-200:#c7ebd3;--green-100:#e6f6eb;--green-50:#f7fcf9;--red-950:#472020;--red-900:#642d2d;--red-800:#a95153;--red-700:#da6262;--red-600:#f86c6b;--red-500:#f98584;--red-400:#faa3a3;--red-300:#fcc0bf;--red-200:#fdd8d8;--red-100:#feeaea;--red-50:#fff5f5;--yellow-950:#32210d;--yellow-900:#6c481d;--yellow-800:#ae7838;--yellow-700:#e0963d;--yellow-600:#ffa940;--yellow-500:#ffba66;--yellow-400:#ffca8a;--yellow-300:#ffdaad;--yellow-200:#ffe8cc;--yellow-100:#fff3e4;--yellow-50:#fffaf5;--alpha-neutral-25:#81909840;--alpha-neutral-10:#8190981a;--alpha-neutral-5:#8190980d;--alpha-black-50:#0b0d0e80;--alpha-black-25:#0b0d0e40;--alpha-black-10:#0b0d0e1a;--alpha-black-5:#0b0d0e0d;--alpha-white-50:#ffffff80;--alpha-white-25:#ffffff40;--alpha-white-10:#ffffff1a;--alpha-white-5:#ffffff0d;--alpha-white-0:#ffffff00;--alpha-blue-25:#20a8d840;--alpha-blue-10:#20a8d81a;--alpha-blue-5:#20a8d80d;--alpha-purple-25:#b0327340;--alpha-purple-10:#b032731a;--alpha-purple-5:#b032730d;--alpha-green-25:#4dbd7440;--alpha-green-10:#4dbd741a;--alpha-green-5:#4dbd740d;--alpha-red-25:#f86c6b40;--alpha-red-10:#f86c6b1a;--alpha-red-5:#f86c6b0d;--alpha-yellow-25:#ffa94040;--alpha-yellow-10:#ffa9401a;--alpha-yellow-5:#ffa9400d;--alpha-violet-25:#6248f540;--alpha-violet-10:#6248f51a;--alpha-violet-5:#6248f50d;--violet-gr:#00000033;--space-0:0px;--space-2-5:2.5px;--space-5:5px;--space-7-5:7.5px;--space-10:10px;--space-15:15px;--space-20:20px;--space-25:25px;--space-30:30px;--space-35:35px;--space-40:40px;--space-45:45px;--space-50:50px;--space-55:55px;--space-60:60px;--space-65:65px;--space-70:70px;--space-80:80px;--space-100:100px;--radius-0:0px;--radius-5:5px;--radius-10:10px;--radius-15:15px;--radius-20:20px;--radius-25:25px;--radius-30:30px;--radius-35:35px;--radius-40:40px;--radius-45:45px;--radius-50:50px;--radius-55:55px;--radius-60:60px;--radius-65:65px;--radius-70:70px;--radius-80:80px;--radius-100:100px;--weight-light:300;--weight-regular:400;--weight-semibold:600;--weight-bold:700;--font-sans:"Open Sans",sans-serif;}
+/* PS Design System — component styles. Load after tokens.css. */
+
+/* Checkbox (Figma: checkbox). Light-background variants (Dark theme=False). */
+.ps-checkbox {
+  appearance: none; -webkit-appearance: none;
+  box-sizing: border-box; flex: none; margin: 0;
+  width: var(--ps-cb-size, 20px); height: var(--ps-cb-size, 20px);
+  border: 1px solid var(--neutral-400);
+  border-radius: var(--ps-cb-radius, 5px);
+  background: var(--neutral-0) no-repeat center / 100% 100%;
+  cursor: pointer;
+}
+.ps-checkbox--l { --ps-cb-size: 30px; --ps-cb-radius: 7.5px; } /* 7.5px: local exception, not a radius token */
+.ps-checkbox--m { --ps-cb-size: 20px; --ps-cb-radius: 5px; }
+.ps-checkbox--s { --ps-cb-size: 15px; --ps-cb-radius: 5px; }
+
+/* Active=True */
+.ps-checkbox:checked {
+  background-color: var(--blue-600); border-color: var(--blue-600);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath d='M9 15.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+/* Indeterminate=True (set el.indeterminate = true, or add .is-indeterminate) */
+.ps-checkbox:indeterminate, .ps-checkbox.is-indeterminate {
+  background-color: var(--blue-600); border-color: var(--blue-600);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Crect x='7' y='13.5' width='16' height='3' rx='1.5' fill='%23fff'/%3E%3C/svg%3E");
+}
+/* Disable=True */
+.ps-checkbox:disabled { background-color: var(--neutral-100); cursor: not-allowed; }
+.ps-checkbox:disabled:checked,
+.ps-checkbox:disabled:indeterminate,
+.ps-checkbox:disabled.is-indeterminate { background-color: var(--neutral-500); border-color: var(--neutral-500); }
+
+/* Focus is not designed in the DS: a provisional ring so keyboard users can see it. */
+.ps-checkbox:focus-visible { outline: 2px solid var(--blue-800); outline-offset: 2px; }
+
+/* RadioButton (Figma: radiobutton). Light by default; add .ps-radio--dark for Dark theme=True. */
+.ps-radio {
+  appearance: none; -webkit-appearance: none;
+  box-sizing: border-box; flex: none; margin: 0;
+  width: var(--rb-size, 20px); height: var(--rb-size, 20px);
+  border-radius: 50%;
+  border: var(--rb-bw, 2px) solid var(--rb-stroke);
+  background:
+    radial-gradient(circle, var(--rb-dot) 0 calc(var(--rb-d, 10px) / 2), transparent calc(var(--rb-d, 10px) / 2 + 0.5px)) center / 100% 100% no-repeat border-box,
+    var(--rb-fill);
+  cursor: pointer;
+  --rb-fill: var(--neutral-0); --rb-stroke: var(--neutral-400); --rb-dot: transparent;
+}
+.ps-radio--l { --rb-size: 30px; --rb-bw: 2px; --rb-d: 16px; }
+.ps-radio--m { --rb-size: 20px; --rb-bw: 2px; --rb-d: 10px; }
+.ps-radio--s { --rb-size: 15px; --rb-bw: 1px; --rb-d: 7px; }
+
+/* Light theme */
+.ps-radio:checked { --rb-fill: var(--blue-600); --rb-stroke: transparent; --rb-dot: var(--neutral-0); }
+.ps-radio:disabled { --rb-fill: var(--neutral-100); cursor: not-allowed; }
+.ps-radio:disabled:checked { --rb-fill: var(--neutral-500); --rb-stroke: transparent; --rb-dot: var(--neutral-200); }
+.ps-radio--l:disabled:checked { --rb-dot: var(--neutral-100); } /* as in the source: L uses neutral-100, M and S neutral-200 */
+
+/* Dark theme: no stroke; selected inverts to a white circle with a blue dot */
+.ps-radio--dark { --rb-stroke: transparent; }
+.ps-radio--dark:checked { --rb-fill: var(--neutral-0); --rb-dot: var(--blue-600); }
+.ps-radio--dark:disabled { --rb-fill: var(--neutral-200); }
+.ps-radio--dark:disabled:checked { --rb-fill: var(--neutral-200); --rb-dot: var(--neutral-500); }
+
+/* Focus is not designed in the DS: a provisional ring so keyboard users can see it. */
+.ps-radio:focus-visible { outline: 2px solid var(--blue-800); outline-offset: 2px; }
+.ps-radio--dark:focus-visible { outline-color: var(--blue-400); }
+
+/* Switch / toggle (Figma: switch). Use <input type="checkbox" role="switch">. Add .ps-switch--dark for Dark theme=True. */
+.ps-switch {
+  appearance: none; -webkit-appearance: none;
+  box-sizing: border-box; flex: none; margin: 0; border: 0;
+  width: var(--sw-w, 35px); height: var(--sw-h, 20px);
+  border-radius: 100px;
+  background:
+    radial-gradient(circle closest-side, var(--sw-knob) calc(100% - 0.5px), transparent 100%)
+      var(--sw-pad, 2px) center / var(--sw-k, 16px) var(--sw-k, 16px) no-repeat,
+    var(--sw-track);
+  cursor: pointer;
+  transition: background-position .15s ease;
+  --sw-track: var(--slate-400); --sw-knob: var(--neutral-0);
+}
+.ps-switch--l { --sw-w: 50px; --sw-h: 30px; --sw-k: 24px; --sw-pad: 3px; }
+.ps-switch--m { --sw-w: 35px; --sw-h: 20px; --sw-k: 16px; --sw-pad: 2px; }
+.ps-switch--s { --sw-w: 25px; --sw-h: 15px; --sw-k: 11px; --sw-pad: 2px; }
+/* On: knob moves to the right */
+.ps-switch:checked { background-position: calc(100% - var(--sw-pad, 2px)) center, 0 0; }
+
+/* Light theme */
+.ps-switch:checked { --sw-track: var(--blue-600); }
+.ps-switch:disabled { --sw-track: var(--neutral-200); cursor: not-allowed; }
+.ps-switch:disabled:checked { --sw-track: var(--neutral-500); --sw-knob: var(--neutral-200); }
+
+/* Dark theme: Off is a white track with a blue knob; On uses blue-500 */
+.ps-switch--dark { --sw-track: var(--neutral-0); --sw-knob: var(--blue-500); }
+.ps-switch--dark:checked { --sw-track: var(--blue-500); --sw-knob: var(--neutral-0); }
+.ps-switch--dark:disabled { --sw-track: var(--neutral-200); --sw-knob: var(--neutral-0); }
+.ps-switch--dark:disabled:checked { --sw-track: var(--neutral-400); --sw-knob: var(--neutral-200); }
+
+/* Focus is not designed in the DS: a provisional ring so keyboard users can see it. */
+.ps-switch:focus-visible { outline: 2px solid var(--blue-800); outline-offset: 2px; }
+.ps-switch--dark:focus-visible { outline-color: var(--blue-400); }
+@media (prefers-reduced-motion: reduce) { .ps-switch { transition: none; } }
+
+/* Divider (Figma: dot devider, asterisk devider). Inline separator; color comes from the parent (currentColor). */
+.ps-divider {
+  display: inline-block; flex: none; vertical-align: middle;
+  width: var(--ps-dv-w, 5px); height: var(--ps-dv-h, 20px);
+  background-color: currentColor;
+  -webkit-mask: var(--ps-dv-glyph) center / var(--ps-dv-gw) var(--ps-dv-gh) no-repeat;
+          mask: var(--ps-dv-glyph) center / var(--ps-dv-gw) var(--ps-dv-gh) no-repeat;
+}
+/* Line size: the height of the text line the divider sits in. */
+.ps-divider--xl { --ps-dv-h: 30px; }
+.ps-divider--l  { --ps-dv-h: 25px; }
+.ps-divider--m  { --ps-dv-h: 20px; }
+.ps-divider--s  { --ps-dv-h: 15px; }
+/* Type × Size. Box width is part of the spacing: no extra margin needed beyond the parent gap. */
+.ps-divider--dot.ps-divider--heavy { --ps-dv-w: 10px; --ps-dv-gw: 8px; --ps-dv-gh: 8px; --ps-dv-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='1 4 8 8'%3E%3Cpath d='M5 4C2.79 4 1 5.79 1 8C1 10.21 2.79 12 5 12C7.21 12 9 10.21 9 8C9 5.79 7.21 4 5 4Z'/%3E%3C/svg%3E"); }
+.ps-divider--dot.ps-divider--base { --ps-dv-w: 5px; --ps-dv-gw: 5px; --ps-dv-gh: 5px; --ps-dv-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 5 5 5'%3E%3Cpath d='M2.5 5C1.12 5 0 6.12 0 7.5C0 8.88 1.12 10 2.5 10C3.88 10 5 8.88 5 7.5C5 6.12 3.88 5 2.5 5Z'/%3E%3C/svg%3E"); }
+.ps-divider--dot.ps-divider--compact { --ps-dv-w: 3px; --ps-dv-gw: 3px; --ps-dv-gh: 3px; --ps-dv-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 6 3 3'%3E%3Cpath d='M1.5 6C0.67 6 0 6.67 0 7.5C0 8.33 0.67 9 1.5 9C2.33 9 3 8.33 3 7.5C3 6.67 2.33 6 1.5 6Z'/%3E%3C/svg%3E"); }
+.ps-divider--asterisk.ps-divider--heavy { --ps-dv-w: 10px; --ps-dv-gw: 10px; --ps-dv-gh: 11px; --ps-dv-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 2 10 11'%3E%3Cpath d='M5 2C5.55 2 6 2.45 6 3V4.93C6 5.31 6.41 5.55 6.74 5.37L8.48 4.39C8.96 4.11 9.58 4.28 9.86 4.76C10.14 5.23 9.98 5.84 9.5 6.11L7.81 7.06C7.47 7.25 7.47 7.74 7.81 7.93L9.5 8.89C9.98 9.16 10.14 9.76 9.86 10.24C9.58 10.71 8.96 10.88 8.48 10.61L6.74 9.63C6.41 9.44 6 9.68 6 10.06V12C6 12.55 5.55 13 5 13C4.45 13 4 12.55 4 12V10.07C4 9.68 3.58 9.44 3.25 9.63L1.52 10.61C1.04 10.88 0.42 10.71 0.14 10.24C-0.14 9.76 0.02 9.16 0.5 8.89L2.19 7.93C2.53 7.74 2.53 7.25 2.19 7.06L0.5 6.11C0.02 5.84 -0.14 5.23 0.14 4.76C0.42 4.28 1.04 4.11 1.52 4.39L3.25 5.36C3.58 5.55 4 5.31 4 4.93V3C4 2.45 4.45 2 5 2Z'/%3E%3C/svg%3E"); }
+.ps-divider--asterisk.ps-divider--base { --ps-dv-w: 8px; --ps-dv-gw: 7.5px; --ps-dv-gh: 8.25px; --ps-dv-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0.25 3.37 7.5 8.25'%3E%3Cpath d='M4 3.37C4.41 3.37 4.75 3.71 4.75 4.12V5.36C4.75 5.74 5.16 5.98 5.49 5.79L6.61 5.16C6.97 4.96 7.43 5.09 7.64 5.44C7.85 5.8 7.73 6.25 7.37 6.46L6.3 7.06C5.96 7.25 5.96 7.74 6.3 7.93L7.37 8.54C7.74 8.75 7.86 9.2 7.65 9.56C7.44 9.91 6.97 10.04 6.61 9.83L5.49 9.2C5.16 9.01 4.75 9.25 4.75 9.64V10.88C4.75 11.29 4.41 11.63 4 11.63C3.58 11.63 3.25 11.29 3.25 10.88V9.64C3.25 9.26 2.83 9.02 2.5 9.2L1.39 9.83C1.03 10.04 0.56 9.91 0.35 9.56C0.14 9.2 0.26 8.75 0.62 8.54L1.7 7.93C2.04 7.74 2.04 7.25 1.7 7.06L0.63 6.46C0.27 6.25 0.14 5.8 0.35 5.44C0.56 5.09 1.03 4.96 1.39 5.16L2.5 5.79C2.83 5.98 3.25 5.74 3.25 5.36V4.12C3.25 3.71 3.58 3.37 4 3.37Z'/%3E%3C/svg%3E"); }
+.ps-divider--asterisk.ps-divider--compact { --ps-dv-w: 5px; --ps-dv-gw: 5px; --ps-dv-gh: 5.62px; --ps-dv-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 4.69 5 5.62'%3E%3Cpath d='M2.5 4.69C2.77 4.69 3 4.91 3 5.19V5.77C3 6.15 3.42 6.39 3.75 6.2L4.25 5.91C4.49 5.77 4.8 5.86 4.93 6.09C5.07 6.33 4.99 6.64 4.75 6.78L4.25 7.06C3.92 7.26 3.92 7.74 4.25 7.93L4.75 8.22C4.99 8.36 5.07 8.66 4.93 8.9C4.8 9.14 4.49 9.23 4.25 9.09L3.75 8.8C3.42 8.6 3 8.85 3 9.23V9.81C3 10.09 2.77 10.31 2.5 10.31C2.22 10.31 2 10.09 2 9.81V9.23C2 8.85 1.58 8.61 1.25 8.8L0.75 9.09C0.51 9.23 0.2 9.14 0.07 8.9C-0.07 8.66 0.01 8.36 0.25 8.22L0.75 7.93C1.08 7.74 1.08 7.26 0.75 7.07L0.25 6.78C0.01 6.64 -0.07 6.33 0.07 6.09C0.21 5.86 0.51 5.77 0.75 5.91L1.25 6.2C1.58 6.39 2 6.15 2 5.77V5.19C2 4.91 2.22 4.69 2.5 4.69Z'/%3E%3C/svg%3E"); }
+/* Defaults when only the type is given: Heavy. */
+.ps-divider--dot:not(.ps-divider--base):not(.ps-divider--compact) { --ps-dv-w: 10px; --ps-dv-gw: 8px; --ps-dv-gh: 8px; --ps-dv-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='1 4 8 8'%3E%3Cpath d='M5 4C2.79 4 1 5.79 1 8C1 10.21 2.79 12 5 12C7.21 12 9 10.21 9 8C9 5.79 7.21 4 5 4Z'/%3E%3C/svg%3E"); }
+.ps-divider--asterisk:not(.ps-divider--base):not(.ps-divider--compact) { --ps-dv-w: 10px; --ps-dv-gw: 10px; --ps-dv-gh: 11px; --ps-dv-glyph: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 2 10 11'%3E%3Cpath d='M5 2C5.55 2 6 2.45 6 3V4.93C6 5.31 6.41 5.55 6.74 5.37L8.48 4.39C8.96 4.11 9.58 4.28 9.86 4.76C10.14 5.23 9.98 5.84 9.5 6.11L7.81 7.06C7.47 7.25 7.47 7.74 7.81 7.93L9.5 8.89C9.98 9.16 10.14 9.76 9.86 10.24C9.58 10.71 8.96 10.88 8.48 10.61L6.74 9.63C6.41 9.44 6 9.68 6 10.06V12C6 12.55 5.55 13 5 13C4.45 13 4 12.55 4 12V10.07C4 9.68 3.58 9.44 3.25 9.63L1.52 10.61C1.04 10.88 0.42 10.71 0.14 10.24C-0.14 9.76 0.02 9.16 0.5 8.89L2.19 7.93C2.53 7.74 2.53 7.25 2.19 7.06L0.5 6.11C0.02 5.84 -0.14 5.23 0.14 4.76C0.42 4.28 1.04 4.11 1.52 4.39L3.25 5.36C3.58 5.55 4 5.31 4 4.93V3C4 2.45 4.45 2 5 2Z'/%3E%3C/svg%3E"); }
+
+/* Tag / Label (Figma: tag). Labels and badges use the same component.
+   Markup: <span class="ps-tag ps-tag--xl ps-tag--blue ps-tag--light">
+             [<span class="ps-tag__icon">svg</span>]
+             <span class="ps-tag__text"><span class="ps-tag__headline">headline</span>
+               [<span class="ps-divider ps-divider--dot ps-divider--compact" aria-hidden="true"></span><span class="ps-tag__subline">subline</span>]</span>
+             [<span class="ps-tag__icon">svg</span>]</span> */
+.ps-tag {
+  box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; flex: none;
+  height: var(--ps-tag-h); min-width: var(--ps-tag-h); padding: var(--ps-tag-pad);
+  border-radius: var(--ps-tag-r);
+  background: var(--ps-tag-bg, transparent); color: var(--ps-tag-fg);
+  box-shadow: inset 0 0 0 var(--ps-tag-sw) var(--ps-tag-stroke, transparent); /* stroke is inside, as in Figma */
+  font-family: var(--font-sans, "Open Sans", sans-serif);
+  font-size: var(--ps-tag-fs); line-height: var(--ps-tag-lh); white-space: nowrap;
+}
+.ps-tag__text { display: inline-flex; align-items: center; gap: 5px; padding: 0 5px; }
+.ps-tag__headline { font-weight: 700; }
+.ps-tag__subline { font-weight: 400; }
+.ps-tag__icon { display: inline-flex; flex: none; width: var(--ps-tag-icon); height: var(--ps-tag-icon); }
+.ps-tag__icon svg { width: 100%; height: 100%; fill: currentColor; }
+.ps-tag .ps-divider { --ps-dv-h: var(--ps-tag-lh); }
+
+/* Size: height · padding · radius · stroke · type · icon */
+.ps-tag--xxl { --ps-tag-h: 35px; --ps-tag-pad: 7.5px; --ps-tag-r: 7.5px; --ps-tag-sw: 2px; --ps-tag-fs: 14px; --ps-tag-lh: 20px; --ps-tag-icon: 20px; }
+.ps-tag--xl  { --ps-tag-h: 30px; --ps-tag-pad: 5px;   --ps-tag-r: 5px;   --ps-tag-sw: 2px; --ps-tag-fs: 14px; --ps-tag-lh: 20px; --ps-tag-icon: 20px; }
+.ps-tag--l   { --ps-tag-h: 25px; --ps-tag-pad: 5px;   --ps-tag-r: 5px;   --ps-tag-sw: 1px; --ps-tag-fs: 12px; --ps-tag-lh: 15px; --ps-tag-icon: 15px; }
+.ps-tag--m   { --ps-tag-h: 20px; --ps-tag-pad: 2.5px; --ps-tag-r: 2.5px; --ps-tag-sw: 1px; --ps-tag-fs: 12px; --ps-tag-lh: 15px; --ps-tag-icon: 15px; }
+.ps-tag--s   { --ps-tag-h: 15px; --ps-tag-pad: 0;     --ps-tag-r: 2.5px; --ps-tag-sw: 1px; --ps-tag-fs: 10px; --ps-tag-lh: 15px; --ps-tag-icon: 0; }
+.ps-tag--s .ps-tag__icon { display: none; } /* Size S has no icons */
+.ps-tag--round { --ps-tag-r: 9999px; }
+/* 7.5px and 2.5px radii are local to the tag, not radius tokens. */
+
+/* Foundation: main (600), light background (200), light text (800) */
+.ps-tag--blue    { --ps-tag-main: var(--blue-600);    --ps-tag-soft: var(--blue-200);    --ps-tag-deep: var(--blue-800); }
+.ps-tag--purple  { --ps-tag-main: var(--purple-600);  --ps-tag-soft: var(--purple-200);  --ps-tag-deep: var(--purple-800); }
+.ps-tag--neutral { --ps-tag-main: var(--neutral-950); --ps-tag-soft: var(--neutral-200); --ps-tag-deep: var(--neutral-950); }
+.ps-tag--green   { --ps-tag-main: var(--green-600);   --ps-tag-soft: var(--green-200);   --ps-tag-deep: var(--green-800); }
+.ps-tag--yellow  { --ps-tag-main: var(--yellow-600);  --ps-tag-soft: var(--yellow-200);  --ps-tag-deep: var(--yellow-800); }
+.ps-tag--red     { --ps-tag-main: var(--red-600);     --ps-tag-soft: var(--red-200);     --ps-tag-deep: var(--red-800); }
+.ps-tag--gray    { --ps-tag-main: var(--slate-600);   --ps-tag-soft: var(--slate-200);   --ps-tag-deep: var(--slate-800); }
+.ps-tag--violet  { --ps-tag-main: var(--violet-600);  --ps-tag-soft: var(--violet-200);  --ps-tag-deep: var(--violet-800); }
+
+/* Type */
+.ps-tag--filled { --ps-tag-bg: var(--ps-tag-main); --ps-tag-fg: var(--neutral-0); }
+.ps-tag--stroke { --ps-tag-stroke: var(--ps-tag-main); --ps-tag-fg: var(--ps-tag-main); }
+.ps-tag--light  { --ps-tag-bg: var(--ps-tag-soft); --ps-tag-fg: var(--ps-tag-deep); }
+.ps-tag--white  { --ps-tag-bg: var(--neutral-0); --ps-tag-fg: var(--ps-tag-main); }
+.ps-tag--clear  { --ps-tag-fg: var(--ps-tag-main); }
+
+/* Alfa White / Alfa Black: translucent, for tags on photos or colored surfaces */
+.ps-tag--alfa-white { --ps-tag-main: var(--neutral-0); }
+.ps-tag--alfa-white.ps-tag--filled { --ps-tag-bg: var(--alpha-white-25); --ps-tag-fg: var(--neutral-0); }
+.ps-tag--alfa-white.ps-tag--light  { --ps-tag-bg: var(--alpha-white-10); --ps-tag-fg: var(--neutral-0); }
+.ps-tag--alfa-white.ps-tag--white  { --ps-tag-bg: var(--alpha-white-50); --ps-tag-fg: var(--neutral-950); }
+.ps-tag--alfa-black { --ps-tag-main: var(--neutral-950); }
+.ps-tag--alfa-black.ps-tag--filled { --ps-tag-bg: var(--alpha-black-25); --ps-tag-fg: var(--neutral-950); }
+.ps-tag--alfa-black.ps-tag--light  { --ps-tag-bg: var(--alpha-black-10); --ps-tag-fg: var(--neutral-950); }
+.ps-tag--alfa-black.ps-tag--white  { --ps-tag-bg: var(--alpha-black-50); --ps-tag-fg: var(--neutral-0); }
+
+/* Console / Header (Figma: Навигация · Draft · .web_top 210:1158).
+   54 high, white. Brand left; cart, notifications, wallet, account right.
+   Each right item has Hover and Active (= its dropdown is open) states. */
+.ps-console-header {
+  box-sizing: border-box; position: relative; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;
+  height: 54px; padding: 2px 24px 0 15px; background: var(--neutral-0); color: var(--neutral-950);
+  font-family: var(--font-sans, "Open Sans", sans-serif);
+}
+.ps-console-header__brand { display: inline-flex; align-items: center; gap: 13px; flex: none; padding: 10px 0; color: inherit; text-decoration: none; }
+.ps-console-header__logo { width: 34px; height: 30px; flex: none; }
+.ps-console-header__title { width: min-content; font-size: 12px; line-height: 15px; font-weight: 700; }
+.ps-console-header__actions { display: flex; align-items: flex-start; gap: 5px; min-width: 0; }
+
+/* Item: 55 high (1px taller than the bar, so an open item joins its dropdown). */
+.ps-console-header__item {
+  box-sizing: border-box; position: relative; display: inline-flex; align-items: center; flex: none;
+  height: 55px; padding: 5px 3px 10px; border: 0; border-radius: 5px; background: none; color: var(--neutral-950);
+  font: inherit; text-align: left; cursor: pointer;
+}
+.ps-console-header__pill {
+  box-sizing: border-box; display: inline-flex; align-items: center; gap: 10px; height: 40px; min-width: 40px; padding: 10px;
+  border-radius: 32px;
+}
+.ps-console-header__pill svg { width: 20px; height: 20px; flex: none; fill: currentColor; }
+.ps-console-header__amount { font-size: 14px; line-height: 20px; font-weight: 700; white-space: nowrap; }
+
+/* Hover: 5% black under the pill (round for icons, radius 5 for the wallet) */
+.ps-console-header__item:hover .ps-console-header__pill,
+.ps-console-header__item.is-hover .ps-console-header__pill { background: var(--alpha-black-5); }
+.ps-console-header__item--wallet .ps-console-header__pill { border-radius: 5px; }
+
+/* Active: the item turns blue and its content white; the dropdown hangs below it */
+.ps-console-header__item[aria-expanded="true"] { background: var(--blue-600); color: var(--neutral-0); }
+.ps-console-header__item[aria-expanded="true"] .ps-console-header__pill { background: none; }
+
+/* Cart with items: green ring and dot. Active cart is green, not blue. */
+.ps-console-header__item--cart.has-items .ps-console-header__pill { box-shadow: inset 0 0 0 2px var(--green-600); position: relative; }
+.ps-console-header__item--cart.has-items .ps-console-header__pill::after {
+  content: ""; position: absolute; top: 0; right: 0; width: 12px; height: 12px; border-radius: 50%; background: var(--green-600);
+}
+.ps-console-header__item--cart[aria-expanded="true"] { background: var(--green-600); }
+
+/* Account */
+.ps-console-header__item--account { gap: 10px; padding: 8px 10px 13px; }
+.ps-console-header__avatar {
+  position: relative; display: inline-flex; align-items: center; justify-content: center; flex: none; width: 30px; height: 30px; border-radius: 50%;
+  background: var(--blue-600); color: var(--neutral-0); font-size: 16px; line-height: 15px; font-weight: 700; text-shadow: 0 1px 0 rgb(0 0 0 / 0.15);
+}
+.ps-console-header__avatar::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: transparent; }
+.ps-console-header__item--account:hover .ps-console-header__avatar::after,
+.ps-console-header__item--account.is-hover .ps-console-header__avatar::after { background: var(--alpha-black-5); }
+.ps-console-header__item--account[aria-expanded="true"] .ps-console-header__avatar::after { background: var(--alpha-black-10); }
+.ps-console-header__account-text { display: flex; flex-direction: column; min-width: 0; }
+.ps-console-header__account-name { font-size: 14px; line-height: 20px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 240px; }
+.ps-console-header__account-email { font-size: 12px; line-height: 14px; color: var(--neutral-700); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 240px; }
+.ps-console-header__item--account[aria-expanded="true"] .ps-console-header__account-email { color: var(--slate-200); }
+
+.ps-console-header__item:focus-visible { outline: 2px solid var(--blue-800); outline-offset: -2px; } /* provisional */
+
+/* Console / Header dropdown (Figma: Навигация · desktop 210:2905).
+   Hangs from the bottom of the header, right edge aligned with the open item. */
+.ps-console-dropdown {
+  box-sizing: border-box; display: flex; flex-direction: column; width: 390px;
+  background: var(--slate-100); border-radius: 0 0 20px 20px; box-shadow: 0 0 15px rgb(0 0 0 / 0.15);
+  font-family: var(--font-sans, "Open Sans", sans-serif); color: var(--neutral-950);
+}
+.ps-console-dropdown--padded { gap: 15px; padding: 15px; }
+.ps-console-dropdown--wide { width: 400px; }
+.ps-console-dropdown__title { margin: 0; padding: 15px 15px 10px; font-size: 18px; line-height: 24px; font-weight: 700; }
+.ps-console-dropdown__balance { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 15px; }
+.ps-console-dropdown__balance-amount { font-size: 24px; line-height: 24px; font-weight: 700; }
+.ps-console-dropdown__bonus { display: inline-flex; align-items: center; height: 30px; padding: 0 15px; border-radius: 15px; background: var(--green-600); color: var(--neutral-0); font-size: 12px; line-height: 10px; font-weight: 700; white-space: nowrap; }
+.ps-console-dropdown__footer { padding: 15px; }
+.ps-console-dropdown__button {
+  box-sizing: border-box; display: inline-flex; align-items: center; justify-content: center; gap: 10px; height: 40px; padding: 10px 20px;
+  border: 0; border-radius: 10px; background: var(--blue-600); color: var(--neutral-0); font: inherit; font-size: 14px; line-height: 20px; font-weight: 700; cursor: pointer;
+}
+.ps-console-dropdown__button--block { width: 100%; }
+.ps-console-dropdown__button--stroke { background: none; color: var(--neutral-950); box-shadow: inset 0 0 0 2px var(--blue-600); }
+.ps-console-dropdown__button svg { width: 20px; height: 20px; fill: currentColor; }
+.ps-console-dropdown__promo { display: flex; flex-direction: column; align-items: flex-start; gap: 15px; padding: 20px 30px; border-radius: 10px; background: linear-gradient(180deg, #281a52, #0c406f); color: var(--neutral-0); }
+.ps-console-dropdown__promo p { margin: 0; font-size: 24px; line-height: 30px; font-weight: 700; }
+.ps-console-dropdown__card { display: flex; flex-direction: column; gap: 15px; padding: 20px 30px; border-radius: 10px; background: var(--neutral-0); }
+.ps-console-dropdown__account-name { margin: 0; font-size: 24px; line-height: 24px; font-weight: 700; }
+.ps-console-dropdown__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; margin-top: 5px; font-size: 12px; line-height: 16px; color: var(--slate-800); }
+.ps-console-dropdown__meta > * + *::before { content: "•"; margin-right: 5px; color: var(--slate-400); }
+.ps-console-dropdown__user { border-radius: 10px; box-shadow: inset 0 0 0 1px var(--slate-400); }
+.ps-console-dropdown__user-head { display: flex; gap: 10px; padding: 20px 15px 0; }
+.ps-console-dropdown__user-icon { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 40px; height: 40px; border-radius: 50%; background: var(--neutral-0); }
+.ps-console-dropdown__user-icon svg { width: 20px; height: 20px; fill: var(--blue-600); }
+.ps-console-dropdown__user-email { display: block; font-size: 18px; line-height: 20px; overflow: hidden; text-overflow: ellipsis; }
+.ps-console-dropdown__user-role { display: block; font-size: 12px; line-height: 16px; color: var(--slate-800); }
+.ps-console-dropdown__links { display: flex; flex-direction: column; margin: 0; padding: 20px 30px; list-style: none; }
+.ps-console-dropdown__card .ps-console-dropdown__links { padding: 0; }
+.ps-console-dropdown__link {
+  display: flex; align-items: center; gap: 10px; min-height: 40px; padding: 10px 0; box-sizing: border-box;
+  color: var(--neutral-950); font-size: 14px; line-height: 20px; font-weight: 700; text-decoration: none;
+}
+.ps-console-dropdown__link > span:first-child { text-decoration: underline; text-decoration-color: var(--blue-600); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+.ps-console-dropdown__link--danger > span:first-child { text-decoration-color: var(--red-600); }
+.ps-console-dropdown__link-end { margin-left: auto; display: inline-flex; color: var(--neutral-500); font-weight: 600; }
+.ps-console-dropdown__link-end svg { width: 15px; height: 15px; fill: var(--neutral-950); }
+.ps-console-dropdown__back { display: inline-flex; align-items: center; gap: 10px; margin: 20px 15px 5px; padding: 0; border: 0; background: none; color: var(--neutral-950); font: inherit; font-size: 14px; line-height: 20px; font-weight: 600; cursor: pointer; align-self: flex-start; }
+.ps-console-dropdown__back svg { width: 15px; height: 15px; fill: currentColor; }
+.ps-console-dropdown__accounts { display: flex; flex-direction: column; gap: 5px; max-height: 600px; overflow-y: auto; margin: 0; padding: 15px; list-style: none; }
+.ps-console-dropdown__account {
+  box-sizing: border-box; display: block; width: 100%; padding: 15px 20px; border: 0; border-radius: 10px; background: var(--neutral-0);
+  color: var(--neutral-950); font: inherit; text-align: left; cursor: pointer;
+}
+.ps-console-dropdown__account[aria-current="true"] { background: var(--blue-100); box-shadow: inset 0 0 0 1px var(--blue-600); }
+.ps-console-dropdown__account-title { display: block; font-size: 14px; line-height: 20px; font-weight: 700; }
+.ps-console-dropdown__account .ps-console-dropdown__meta b { font-weight: 700; }
+.ps-console-dropdown a:focus-visible, .ps-console-dropdown button:focus-visible { outline: 2px solid var(--blue-800); outline-offset: 2px; } /* provisional */
+
+
+/* Button (Figma: button), per components/Button/README.md */
+.ps-button{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;gap:5px;border:2px solid transparent;font-family:var(--font-sans);font-weight:400;white-space:nowrap;cursor:pointer;text-decoration:none;background:transparent}
+.ps-button:focus-visible{outline:2px solid var(--blue-800);outline-offset:2px}
+.ps-button svg{flex:none;fill:currentColor}
+.ps-button__text{display:block}
+.ps-button--l{height:50px;padding:15px;border-radius:15px;font-size:14px;line-height:20px}.ps-button--l .ps-button__text{padding:0 5px}.ps-button--l svg{width:20px;height:20px}.ps-button--l.ps-button--icon-only{width:50px}
+.ps-button--m{height:40px;padding:10px;border-radius:10px;font-size:14px;line-height:20px}.ps-button--m .ps-button__text{padding:0 5px}.ps-button--m svg{width:20px;height:20px}.ps-button--m.ps-button--icon-only{width:40px}
+.ps-button--s{height:30px;padding:7.5px 10px;border-radius:7.5px;font-size:12px;line-height:15px}.ps-button--s .ps-button__text{padding:0 2.5px}.ps-button--s svg{width:15px;height:15px}.ps-button--s.ps-button--icon-only{width:30px;padding:0}
+.ps-button--block{width:100%}
+.ps-button--blue.ps-button--filled{background:var(--blue-600);color:var(--neutral-0)}.ps-button--blue.ps-button--stroke{border-color:var(--blue-600);color:var(--neutral-950)}.ps-button--blue.ps-button--light{background:var(--blue-100);color:var(--blue-700)}.ps-button--blue.ps-button--white{background:var(--neutral-0);color:var(--blue-700)}.ps-button--blue.ps-button--clear{color:var(--blue-700)}
+.ps-button--purple.ps-button--filled{background:var(--purple-600);color:var(--neutral-0)}.ps-button--purple.ps-button--stroke{border-color:var(--purple-600);color:var(--neutral-950)}.ps-button--purple.ps-button--light{background:var(--purple-100);color:var(--purple-700)}.ps-button--purple.ps-button--white{background:var(--neutral-0);color:var(--purple-700)}.ps-button--purple.ps-button--clear{color:var(--purple-700)}
+.ps-button--green.ps-button--filled{background:var(--green-600);color:var(--neutral-0)}.ps-button--green.ps-button--stroke{border-color:var(--green-600);color:var(--neutral-950)}.ps-button--green.ps-button--light{background:var(--green-100);color:var(--green-700)}.ps-button--green.ps-button--white{background:var(--neutral-0);color:var(--green-700)}.ps-button--green.ps-button--clear{color:var(--green-700)}
+.ps-button--yellow.ps-button--filled{background:var(--yellow-600);color:var(--neutral-0)}.ps-button--yellow.ps-button--stroke{border-color:var(--yellow-600);color:var(--neutral-950)}.ps-button--yellow.ps-button--light{background:var(--yellow-100);color:var(--yellow-700)}.ps-button--yellow.ps-button--white{background:var(--neutral-0);color:var(--yellow-700)}.ps-button--yellow.ps-button--clear{color:var(--yellow-700)}
+.ps-button--red.ps-button--filled{background:var(--red-600);color:var(--neutral-0)}.ps-button--red.ps-button--stroke{border-color:var(--red-600);color:var(--neutral-950)}.ps-button--red.ps-button--light{background:var(--red-100);color:var(--red-700)}.ps-button--red.ps-button--white{background:var(--neutral-0);color:var(--red-700)}.ps-button--red.ps-button--clear{color:var(--red-700)}
+.ps-button--gray.ps-button--filled{background:var(--slate-600);color:var(--neutral-0)}.ps-button--gray.ps-button--stroke{border-color:var(--slate-600);color:var(--neutral-950)}.ps-button--gray.ps-button--light{background:var(--slate-100);color:var(--slate-700)}.ps-button--gray.ps-button--white{background:var(--neutral-0);color:var(--slate-700)}.ps-button--gray.ps-button--clear{color:var(--slate-700)}
+.ps-button--violet.ps-button--filled{background:var(--violet-600);color:var(--neutral-0)}.ps-button--violet.ps-button--stroke{border-color:var(--violet-600);color:var(--violet-950)}.ps-button--violet.ps-button--light{background:var(--violet-100);color:var(--violet-700)}.ps-button--violet.ps-button--white{background:var(--neutral-0);color:var(--violet-700)}.ps-button--violet.ps-button--clear{color:var(--violet-700)}
+.ps-button--neutral.ps-button--filled{background:var(--neutral-950);color:var(--neutral-0)}.ps-button--neutral.ps-button--stroke{border-color:var(--neutral-950);color:var(--neutral-950)}.ps-button--neutral.ps-button--light{background:var(--neutral-100);color:var(--neutral-950)}.ps-button--neutral.ps-button--white{background:var(--neutral-0);color:var(--neutral-950)}.ps-button--neutral.ps-button--clear{color:var(--neutral-950)}
+/* LinkButton (Figma: link_button), per components/LinkButton/README.md */
+.ps-link-button{display:inline-flex;align-items:center;font-family:var(--font-sans);font-weight:700;color:var(--neutral-950);text-decoration:underline;text-decoration-color:var(--blue-600);text-decoration-thickness:1px;text-underline-offset:4px;text-decoration-skip-ink:auto;background:none;border:0;padding:0;cursor:pointer}
+.ps-link-button:focus-visible{outline:2px solid var(--blue-800);outline-offset:2px}
+.ps-link-button svg{flex:none;fill:currentColor}
+.ps-link-button--primary svg{color:var(--blue-600)}
+.ps-link-button--l{font-size:18px;line-height:30px;gap:10px}.ps-link-button--l svg{width:30px;height:30px}
+.ps-link-button--m{font-size:14px;line-height:20px;gap:10px}.ps-link-button--m svg{width:20px;height:20px}
+.ps-link-button--s{font-size:12px;line-height:15px;gap:5px}.ps-link-button--s svg{width:15px;height:15px}
+.ps-link-button--dotes{text-decoration-style:dotted;text-decoration-thickness:1.5px}
+/* Input (Figma: input), per components/Input/README.md */
+.ps-input{display:flex;flex-direction:column;gap:5px;font-family:var(--font-sans)}
+.ps-input__label{color:var(--neutral-950)}
+.ps-input__field{box-sizing:border-box;display:flex;align-items:center;gap:15px;border:1px solid var(--neutral-300);background:var(--neutral-0);overflow:hidden}
+.ps-input__control{flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;color:var(--neutral-950);padding:0}
+.ps-input__control::placeholder{color:var(--neutral-400)}
+.ps-input__field:focus-within{border-color:var(--blue-600)}
+.ps-input__desc{color:var(--neutral-700)}
+.ps-input--l .ps-input__label{font-size:14px;line-height:20px}.ps-input--l .ps-input__field{height:50px;border-radius:10px;padding:0 5px 0 15px;font-size:14px;line-height:20px}.ps-input--l .ps-input__desc{font-size:14px;line-height:15px}
+.ps-input--xl .ps-input__label{font-size:18px;line-height:30px}.ps-input--xl .ps-input__field{height:60px;border-radius:10px;padding:0 10px 0 20px;font-size:14px;line-height:20px}.ps-input--xl .ps-input__desc{font-size:14px;line-height:15px}
